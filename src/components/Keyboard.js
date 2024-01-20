@@ -11,7 +11,7 @@ const Keyboard = ({ keyboard, onButtonClick }) => {
               value={value}
               onClick={() => onButtonClick(value)}
               className="button"            >
-              {value}
+              {value} XD
             </button>
           ))}
         </div>
