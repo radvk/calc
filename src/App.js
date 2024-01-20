@@ -13,11 +13,15 @@ const keyboard = [
 
 const App = () => {
   const [screenValue, setScreenValue] = useState('');
-
+  const [dataFromScreen, setdataFromScreen] = useState('');
 
   const handleButtonClick = (value) => {
+    if ( value === "+" ){
+      setdataFromScreen(screenValue)
+    }
+    
     setScreenValue((prevValue) => value === "C" ? " " : prevValue + value);
-    console.log(value)
+    console.log(dataFromScreen)
   };
 
   return (
