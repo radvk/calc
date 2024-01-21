@@ -12,22 +12,22 @@ const keyboard = [
 ];
 
 const App = () => {
-  const [screenValue, setScreenValue] = useState('');
-  const [dataFromScreen, setdataFromScreen] = useState('');
+  const [input, setInput] = useState('');
+  const [result, setResult] = useState('');
 
   const handleButtonClick = (value) => {
     if ( value === "+" ){
-      setdataFromScreen(screenValue)
+      setResult(input)
     }
     
-    setScreenValue((prevValue) => value === "C" ? " " : prevValue + value);
-    console.log(dataFromScreen)
+    setInput((prevValue) => value === "C" ? " " : prevValue + value);
+    console.log(result)
   };
 
   return (
     <div className="App">
       <div className="wrapper">
-        <Screen value={screenValue} />
+        <Screen value={input} />
         <Keyboard keyboard={keyboard} onButtonClick={handleButtonClick} />
       </div>
     </div>
